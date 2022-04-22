@@ -9,10 +9,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
-    res.status(201).json({message: 'Welcome'})
+    res.status(201).json({message: 'Welcome to the top 10 crypto app'})
 })
 
-app.use('/api', require('./routes/topCryptosRoute'))
+app.use('/api/topCryptos', require('./routes/topCryptosRoute'))
 
 app.use(errorHandler)
 
